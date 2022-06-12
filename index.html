@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lite-Brite | danbennett.dev</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mallanna&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="title">
+      <div class="lite-text title">
+        <div class="title-red">L</div>
+        <div class="title-blue">I</div>
+        <div class="title-orange">T</div>
+        <div class="title-blue">E</div>
+      </div>
+      <div class="title-purple dash">-</div>
+      <div class="brite-text title">
+        <div class="title-green">B</div>
+        <div class="title-blue">R</div>
+        <div class="title-yellow">I</div>
+        <div class="title-red">T</div>
+        <div class="title-green">E</div>
+      </div>
+    </div>
+
+    <div class="outside-container">
+      <div class="sound-links-container">
+        <img src="./img/icons/sound.png" class="control-img-sound" id="musicButton" alt="" />
+
+        <img src="./img/icons/to-do-list.png" class="control-img-info" alt="" id="modalButton" />
+      </div>
+      <img src="./img/stickers/mocking.png" class="frame-sticker-face" alt="" />
+      <img src="./img/stickers/dog.png" class="frame-sticker-dog" alt="" />
+      <img src="./img/stickers/hippopotamus.png" class="frame-sticker-hippo" alt="" />
+      <img src="./img/stickers/spa-and-relaxation.png" class="frame-sticker-spa" alt="" />
+      <img src="./img/stickers/piggy.png" class="frame-sticker-piggy" alt="" />
+      <img src="./img/stickers/mocking(1).png" class="frame-sticker-dog-dance" alt="" />
+      <img src="./img/stickers/monkey.png" class="frame-sticker-monkey" alt="" />
+      <img src="./img/stickers/watermelon.png" class="frame-sticker-watermelon" alt="" />
+      <img src="./img/stickers/yummy.png" class="frame-sticker-yummy" alt="" />
+      <img src="./img/stickers/ice-cream.png" class="frame-sticker-ice-cream" alt="" />
+      <img src="./img/stickers/excited.png" class="frame-sticker-excited" alt="" />
+
+      <div class="display-container">
+        <div class="lite-screen-container" id="lite-brite-panel"></div>
+        <div class="controls-container">
+          <div class="clear-presets-containter">
+            <div class="button-stack">
+              <button class="preset" onclick="onPreset()">
+                <img src="./img/buttons/galaxy.png" alt="" class="button-img preset-btn-sticker" />
+                Presets
+              </button>
+              <button class="clear" onclick="onClear()">
+                Clear
+                <img src="./img/buttons/monster.png" alt="" class="button-img clear-btn-sticker" />
+              </button>
+            </div>
+          </div>
+          <div class="middle-control-flex">
+            <div class="color-select-title">Color Select</div>
+            <div class="color-palette-flex">
+              <div class="palette-select pink-palette" id="pinkSelect"></div>
+              <div class="palette-select blue-palette" id="blueSelect"></div>
+              <div class="palette-select orange-palette" id="orangeSelect"></div>
+              <div class="palette-select purple-palette" id="purpleSelect"></div>
+              <div class="palette-select yellow-palette" id="yellowSelect"></div>
+              <div class="palette-select green-palette" id="greenSelect"></div>
+              <div class="palette-select red-palette" id="redSelect"></div>
+              <div class="palette-select white-palette" id="whiteSelect"></div>
+              <div class="palette-select clear-palette" id="clearSelect"></div>
+            </div>
+          </div>
+          <div class="button-stack">
+            <form id="upload">
+              <!-- <label for="file">File to upload</label>
+              <input id="file" type="file" accept=".json" />
+              <input id="buttonid" type="button" value="Import" /> -->
+              <button class="import" onclick="handleSubmit()">
+                Import
+                <img src="./img/buttons/ufo.png" alt="" class="button-img import-btn-sticker" />
+              </button>
+            </form>
+            <button class="export" onclick="onDownload()">
+              Export
+              <img src="./img/buttons/product-release.png" alt="" class="button-img export-btn-sticker" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal" class="modalDiv">
+      <h2>Lite-Brite Info</h2>
+      <p>Created by Dan Bennett - <a href="http://www.danbennett.dev" target="_blank">danbennett.dev</a></p>
+      <p>
+        I always wanted to use the really cool icons and stickers at
+        <a href="https://www.flaticon.com/" target="_blank">flaticon</a>. Remembered Lite-Brite was a thing...and now
+        look at where we are!!!
+      </p>
+      <p>
+        <a href="https://unsplash.com/photos/8u-OaI3MZrc" target="_blank">Background picture</a> courtesy of
+        <a href="https://unsplash.com/@igorstarkoff" target="_blank">Igor Starkov</a> posted on
+        <a href="https://unsplash.com/" target="_blank">Pexels</a> and then modified using
+        <a href="https://picsart.com/" target="_blank">Picsart</a> pastel filter.
+      </p>
+      <p>
+        Icons and stickers found at <a href="https://www.flaticon.com/" target="_blank">flaticon</a> courtesy of
+        <a href="https://www.flaticon.com/authors/juicy-fish" target="_blank">juicy_fish</a>,
+        <a href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik</a>,
+        <a href="https://www.flaticon.com/authors/stickers" target="_blank">flaticon stickers</a>,
+        <a href="https://www.flaticon.com/authors/mrhamster" target="_blank">MrHamster</a>,
+        <a href="https://www.flaticon.com/authors/soulgie" target="_blank">SoulGIE</a>,
+        <a href="https://www.flaticon.com/authors/surfsupvector" target="_blank">Surfsup.Vector</a> and
+        <a href="https://www.flaticon.com/authors/stickerfolio" target="_blank">Stickerfolio</a>
+      </p>
+      <p>
+        The snazzy song is
+        <a href="https://www.flaticon.com/authors/stickerfolio" target="_blank">A Left Hook by Eric Van Der Westen</a>
+      </p>
+      <p>
+        And <a href="https://mixkit.co/free-sound-effects/click/" target="_blank">Single Classic Click from Mixkit</a>
+      </p>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="./import-export.js"></script>
+    <script src="./music-modal-controls.js"></script>
+    <script src="./presets.js"></script>
+    <script src="./modal.js"></script>
+  </body>
+</html>
