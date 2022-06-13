@@ -28,6 +28,8 @@ function onDownload() {
 let form = document.querySelector('#upload');
 
 function handleSubmit(event) {
+  clickSound();
+  onClear();
   // Stop the form from reloading the page
   event.preventDefault();
   console.log('handle submit fired');
